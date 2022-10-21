@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>eRegistrar - List of Students</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        table {
+            border: 0.25em solid; border-collapse: collapse;
+        }
+        table th, table td {
+            border: 0.125em solid;
+            padding: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="fragments/header :: header"></header>
+    <main>
+        <h2 style="font-size: 2em; margin-bottom: 1em;">List of registered Students</h2>
+        <section>
+            <table>
+                <thead>
+                    <th>#</th>
+                    <th>Student Number</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>CGPA</th>
+                    <th>Enrollment Date</th>
+                    <th>Is International</th>
+                </thead>
+                <tbody>
+                    <tr th:each="student, counter : ${students}">
+                        <th scope="row" th:text="${counter.count}+'.'"></th>
+                        <td th:text="${student.studentNumber}"></td>
+                        <td th:text="${student.firstName}"></td>
+                        <td th:text="${student.middleName}"></td>
+                        <td th:text="${student.lastName}"></td>
+                        <td th:text="${student.cgpa}"></td>
+                        <td th:text="${student.enrollmentDate}"></td>
+                        <td th:text="${student.isInternational}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>
