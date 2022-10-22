@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Lab10SolutionERegistrarApplication {
+public class Lab10ERegistrarApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Lab10SolutionERegistrarApplication.class, args);
+        SpringApplication.run(Lab10ERegistrarApplication.class, args);
         System.out.println("Hello eRegistrar");
     }
 

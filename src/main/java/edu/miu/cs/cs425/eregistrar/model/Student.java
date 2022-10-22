@@ -27,13 +27,12 @@ public class Student {
     @Column(nullable = false) // studentNumber is required
     private String studentNumber;
 
-//    @NotNull(message = "student number can not be null")
-//    @NotEmpty(message = "student number can not be empty or null") // ""
+
     @NotBlank(message = "student number can not be blank, empty or null") // this will handle NotNull and NotEmpty / applies for string
     @Column(nullable = false)
     private String firstName;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String middleName;
 
     @NotBlank

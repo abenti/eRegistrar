@@ -1,0 +1,43 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CaskaydiaCove NF'
+}
+header#main-header > section,  header#main-header > nav, main {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+section#main-branding {
+    background-color: aquamarine;
+    width: 100vw;
+    min-height: 5em;
+}
+header#main-header > nav {
+    background-color: beige;
+    height: 2em;
+    line-height: 2em;
+    font-size: 1.5em;
+}
+body main {
+    margin-top: 1em;
+}
+body footer {
+    background-color: #cdcdcd;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: 4em;
+    align-items: center;
+}
+body footer section {
+    width: 50vw;
+    margin: 0 1em 0em 1em;
+}
+body footer section#right-section {
+    display: flex;
+    justify-content: flex-end;
+    width: 50vw;
+}
